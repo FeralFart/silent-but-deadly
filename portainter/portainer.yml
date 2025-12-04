@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  portainer:
+    image: portainer/portainer-ce:latest
+    container_name: portainer
+    restart: always
+    ports:
+      - "9080:9000"  # Web UI access
+      - "9443:9443"  # Secure Web UI access
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./portainer_data:/data  # Host folder bind mount
+    environment:
+      - TZ=Europe/London
+    networks:
+      - portainer_network
+
+networks:
+  portainer_network:
+    driver: bridge
