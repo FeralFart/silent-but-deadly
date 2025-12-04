@@ -17,7 +17,8 @@ Each service lives in its own folder with a dedicated `*.yml` file for easy depl
 | **immich/**    | Immich – Self-hosted photo and video backup solution. |
 | **nginx/**     | Nginx – Lightweight web server or reverse proxy. |
 | **pihole/**    | Pi-hole – Network-wide ad blocker and DNS sinkhole. |
-| **plex/**      | Plex Media Server – Movie and TV streaming for local media libraries. |
+| **plex/**      | Plex Media Server – Movie and TV streaming for local media libraries; also includes related media management services such as qBittorrent (downloads), Radarr (movie management), and Tautulli (monitoring and analytics). |
+
 | **portainer/** | Portainer – Web UI for managing Docker containers. |
 | **watchtower/** | Watchtower – Automatic container updates. |
 
