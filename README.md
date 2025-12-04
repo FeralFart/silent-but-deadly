@@ -36,7 +36,9 @@ e.g.
 cd gitea
 docker-compose.exe -f .\gitea.yml up -d
 
-## Licence
+---
+
+## License
 
 This repository is for personal use.
 Feel free to copy structure or ideas for your own homelab.
