@@ -1,0 +1,13 @@
+version: "2.1"
+services:
+  heimdall:
+    image: lscr.io/linuxserver/heimdall:latest
+    container_name: heimdall
+    environment:
+      - TZ=Europe/London
+    volumes:
+      - './etc-config:/config'
+    ports:
+      - 3000:80
+      - 3001:443
+    restart: unless-stopped
