@@ -1,0 +1,70 @@
+version: "3.8"
+
+services:
+  plex:
+    image: plexinc/pms-docker:latest
+    container_name: plexms
+    restart: unless-stopped
+    ports:
+      - "32400:32400/tcp"
+      - "3005:3005/tcp"
+      - "8324:8324/tcp"
+      - "32469:32469/tcp"
+      - "1900:1900/udp"
+      - "32410:32410/udp"
+      - "32412:32412/udp"
+      - "32413:32413/udp"
+      - "32414:32414/udp"
+    environment:
+      TZ: "Europe/London"
+      HOSTNAME: "Uptonian"
+    volumes:
+      - "./etc/plex/database:/config"
+      - "./etc/plex/transcode:/transcode"
+      - "./etc/plex/media:/data"
+
+  qbittorrent:
+    image: lscr.io/linuxserver/qbittorrent:latest
+    container_name: qbittorrent
+    restart: unless-stopped
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Etc/UTC
+      - WEBUI_PORT=8080
+    volumes:
+      - "./etc/qbittorrent/appdata/config:/config"
+      - "./etc/plex/media/Films:/downloads"
+      - "./etc/plex/media/Incomplete:/incomplete"
+    ports:
+      - "8080:8080"
+      - "6881:6881"
+      - "6881:6881/udp"
+
+  radarr:
+    image: ghcr.io/linuxserver/radarr:latest
+    container_name: radarr-v3
+    restart: unless-stopped
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Etc/UTC
+    volumes:
+      - "./etc/radarr/appdata/config:/config"
+      - "./etc/plex/media/Films:/movies"
+      - "./etc/plex/media/Incomplete:/downloads"
+    ports:
+      - "7878:7878"
+
+  tautulli:
+    image: lscr.io/linuxserver/tautulli:latest
+    container_name: tautulli
+    restart: unless-stopped
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Etc/UTC
+    volumes:
+      - "./etc/tautulli/config:/config"
+    ports:
+      - "8181:8181"
