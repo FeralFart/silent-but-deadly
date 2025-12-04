@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  filebrowser:
+    image: filebrowser/filebrowser:latest
+    container_name: filebrowser
+    restart: always
+    ports:
+      - 9090:80
+    volumes:
+      - ./google-drive-mirror:/srv
+      - ./fb-db:/database
+      - ./fb-config:/config
