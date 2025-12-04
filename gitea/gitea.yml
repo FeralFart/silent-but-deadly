@@ -1,0 +1,16 @@
+version: "3.9"
+
+services:
+  gitea:
+    image: gitea/gitea:latest
+    container_name: gitea
+    restart: unless-stopped
+    environment:
+      - USER_UID=1000
+      - USER_GID=1000
+      - TZ=Europe/London
+    volumes:
+      - ./data:/data
+    ports:
+      - "3333:3000"   # Web UI
+      - "2222:22"     # SSH
