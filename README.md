@@ -28,17 +28,10 @@ Each service lives in its own folder with a dedicated `*.yml` file for easy depl
 Each service directory contains a single Docker Compose file.  
 To deploy any service:
 
-```bash
-powershell
+```powershell
 cd SERVICE_NAME
-docker-compose.exe .\(SERVICE_NAME).yml up -d
-e.g.
+docker-compose -f .\SERVICE_NAME.yml up -d
+
+# Example:
 cd gitea
-docker-compose.exe -f .\gitea.yml up -d
-
----
-
-## License
-
-This repository is for personal use.
-Feel free to copy structure or ideas for your own homelab.
+docker-compose -f .\gitea.yml up -d
