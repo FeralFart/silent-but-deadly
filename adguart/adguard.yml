@@ -1,0 +1,16 @@
+version: "3"
+services:
+  adguardhome:
+    image: adguard/adguardhome
+    container_name: adguardhome
+    ports:
+      - 53:53/tcp
+      - 53:53/udp
+      - 3333:3000/tcp
+      - 8888:80/tcp
+    volumes:
+      - ./adguardhome/work:/opt/adguardhome/work
+      - ./adguardhome/conf:/opt/adguardhome/conf
+    environment:
+      - TZ=Europe/London
+    restart: unless-stopped
