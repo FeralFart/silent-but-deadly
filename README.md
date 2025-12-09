@@ -10,7 +10,7 @@ Each service lives in its own folder with a dedicated `*.yml` file for easy depl
 | Service        | Description |
 |----------------|-------------|
 | **adguard/**   | AdGuard Home – DNS-level ad blocking and network filtering. |
-| **dozzle** | Dozzle – Web-based simplest live-log viewer. |
+| **dozzle/** | Dozzle – Web-based simplest live-log viewer. |
 | **filebrowser/** | FileBrowser – Web-based file manager with upload/download and user permissions. |
 | **gitea/**     | Gitea – Lightweight, self-hosted Git service similar to GitHub. |
 | **heimdall/**  | Heimdall – Application dashboard to organise shortcuts to all services. |
