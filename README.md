@@ -19,6 +19,7 @@ Each service lives in its own folder with a dedicated `*.yml` file for easy depl
 | **pihole/**    | Pi-hole – Network-wide ad blocker and DNS sinkhole. |
 | **plex/**      | Plex Media Server – Movie and TV streaming for local media libraries;<br>also includes related media management services such as qBittorrent (downloads),<br>Radarr (movie management), and Tautulli (monitoring and analytics). |
 | **portainer/** | Portainer – Web UI for managing Docker containers. |
+| **uptimekuma/** | Uptime Kuma – System monitoring. |
 | **watchtower/** | Watchtower – Automatic container updates. |
 
 ---
