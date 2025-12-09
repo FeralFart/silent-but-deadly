@@ -8,8 +8,6 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
       - ./watchtower_data:/data
     command: ["--schedule", "0 15 03 * * *"]       # daily at 03:15 local time
-    ports:
-      - "18080:8080"
     restart: unless-stopped
     logging:
       driver: "json-file"
