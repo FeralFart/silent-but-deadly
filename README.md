@@ -16,6 +16,7 @@ Each service lives in its own folder with a dedicated `*.yml` file for easy depl
 | **heimdall/**  | Heimdall – Application dashboard to organise shortcuts to all services. |
 | **homeassistant/** | Home Assistant – Home automation and smart device control. |
 | **immich/**    | Immich – Self-hosted photo and video backup solution. |
+| **nginx-alpine/**     | Nginx – Minimalist reverse proxy for devices with limited storage space. |
 | **nginx/**     | Nginx – Lightweight web server or reverse proxy. |
 | **pihole/**    | Pi-hole – Network-wide ad blocker and DNS sinkhole. |
 | **plex/**      | Plex Media Server – Movie and TV streaming for local media libraries;<br>also includes related media management services such as qBittorrent (downloads),<br>Radarr (movie management), and Tautulli (monitoring and analytics). |
