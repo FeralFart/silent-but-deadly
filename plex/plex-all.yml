@@ -1,5 +1,3 @@
-version: "3.8"
-
 services:
   plex:
     image: plexinc/pms-docker:latest
@@ -35,7 +33,7 @@ services:
     volumes:
       - "./etc/qbittorrent/appdata/config:/config"
       - "./etc/plex/media/Films:/downloads"
-      - "./etc/plex/media/Incomplete:/incomplete"
+      - "./etc/qbittorrent/Incomplete:/incomplete"
     ports:
       - "8080:8080"
       - "6881:6881"
@@ -52,7 +50,7 @@ services:
     volumes:
       - "./etc/radarr/appdata/config:/config"
       - "./etc/plex/media/Films:/movies"
-      - "./etc/plex/media/Incomplete:/downloads"
+      - "./etc/qbittorrent/Incomplete:/downloads"
     ports:
       - "7878:7878"
 
