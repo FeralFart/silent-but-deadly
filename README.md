@@ -25,6 +25,7 @@ Each service lives in its own folder with a dedicated `*.yml` file for easy depl
 | **trilium/** | Trilium – Cross-platform, hierarchical note taking application. |
 | **uptimekuma/** | Uptime Kuma – System monitoring. |
 | **watchtower/** | Watchtower – Automatic container updates. |
+| **wireguard/** | Wireguard – General purpose VPN. |
 
 ---
 
