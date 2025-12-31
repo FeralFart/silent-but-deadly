@@ -1,0 +1,24 @@
+services:
+  wg-easy:
+    container_name: wg-easy
+    image: ghcr.io/wg-easy/wg-easy:14
+    restart: unless-stopped
+
+    ports:
+      - "51820:51820/udp"
+      - "51821:51821/tcp"
+
+    cap_add:
+      - NET_ADMIN
+
+    environment:
+      WG_HOST: #Your public IP address
+      WG_PORT: 51820
+      PASSWORD_HASH: #Password hash,  generate at https://github.com/wg-easy/wg-easy/blob/v14/How_to_generate_an_bcrypt_hash.md
+      INSECURE: true
+      WG_DEFAULT_DNS: #DNS servers IP adresses separated with ',' e.g 1.1.1.1.1,8.8.8.8
+      WG_ALLOWED_IPS: #add your local IP's subnet,  e.g 0.0.0.0/0,::/0,192.168.0.0/24
+
+    volumes:
+      - /srv/homelab/wireguard/config:/etc/wireguard
+      - /lib/modules:/lib/modules
