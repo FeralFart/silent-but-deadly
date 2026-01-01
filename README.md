@@ -20,7 +20,7 @@ Each service lives in its own folder with a dedicated `*.yml` file for easy depl
 | **nginx-web/**     | Nginx – Absolute minimum (no backend, no DB) static HTML dashboard. |
 | **nginx/**     | Nginx – Lightweight web server or reverse proxy. |
 | **pihole/**    | Pi-hole – Network-wide ad blocker and DNS sinkhole. |
-| **plex/**      | Plex Media Server – Movie and TV streaming for local media libraries;<br>also includes related media management services such as: <br><br>qBittorrent – open-source software alternative to µTorrent.,<br>Radarr – media management tool,<br>Tautulli  – monitoring and analytics tool for Plex. |
+| **plex/**      | Plex Media Server – Movie and TV streaming for local media libraries;<br>also includes related media management services such as: <br><br>qBittorrent – Open-source software alternative to µTorrent,<br>Radarr – Media management tool,<br>Tautulli – Monitoring and analytics tool for Plex. |
 | **portainer/** | Portainer – Web UI for managing Docker containers. |
 | **trilium/** | Trilium – Cross-platform, hierarchical note taking application. |
 | **uptimekuma/** | Uptime Kuma – System monitoring. |
