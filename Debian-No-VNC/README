@@ -1,0 +1,2 @@
+To build - docker build -t debian-novnc .
+To run - docker run -d --name debian-novnc -p 6080:6080 debian-novnc
