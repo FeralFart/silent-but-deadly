@@ -1,12 +1,46 @@
+Debian Trixie desktop environment running XFCE over noVNC, packaged as a Docker container.
+Provides a full graphical Debian desktop accessible directly from a web browser.
+
+Features
+
+Debian Trixie (testing)
+XFCE desktop (with wallpaper + desktop icons)
+Browser-based access via noVNC (no client required)
+VNC password protected
+Chromium web browser
+Useful CLI tools included:
+sudo, curl, wget
+nano, less, tree
+ip, ping, netstat
+zip, unzip
+
+unattended-upgrades enabled
+Non-root debian user with sudo access
+
+-------------------------------------------------
+
 Amend passwords in Dockerfile
 
 ARG ROOT_PASSWORD= # Root password
 ARG DEBIAN_PASSWORD= # User (debian) password
 
+-------------------------------------------------
+
 Amend VNC password from default "debian" password
 RUN mkdir -p /home/debian/.vnc && \
     x11vnc -storepasswd debian /home/debian/.vnc/passwd && \
     chown -R debian:debian /home/debian/.vnc
+
+-------------------------------------------------
+
+Location
+
+debian-no-vnc/
+├── Dockerfile
+├── supervisord.conf
+└── README.md
+
+-------------------------------------------------
 
 To create image - docker build -t debian-novnc .
 To create container - docker run -d --name debian-novnc -p 6080:6080 debian-novnc
