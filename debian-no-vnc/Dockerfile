@@ -12,7 +12,7 @@ ARG DEBIAN_PASSWORD= # User (debian) password
 
 # Install all packages
 RUN apt-get update && apt-get install -y --no-install-recommends \
-    xfce4 xfce4-terminal xfdesktop4\
+    xfce4 xfce4-terminal xfdesktop4 xfce4-goodies \
     x11vnc xvfb \
     novnc websockify \
     dbus-x11 \
@@ -25,7 +25,6 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     iproute2 net-tools iputils-ping \
     unattended-upgrades apt-listchanges \
     chromium \
- || apt-get install -y --no-install-recommends chromium-browser \
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/*
 
