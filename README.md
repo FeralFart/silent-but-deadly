@@ -10,6 +10,8 @@ Each service lives in its own folder with a dedicated `*.yml` file for easy depl
 | Service        | Description |
 |----------------|-------------|
 | **adguard/**   | AdGuard Home – DNS-level ad blocking and network filtering. |
+| **debian-no-vnc/** | Debian Trixie – Minimal Debian desktop with XFCE, accessible via noVNC (web VNC); includes Chromium browser, sudo, unattended upgrades, apt-listchanges, and optional VNC password. Useful for testing GUI apps or running lightweight desktop services in Docker. |
+
 | **dozzle/** | Dozzle – Web-based simplest live-log viewer. |
 | **filebrowser/** | FileBrowser – Web-based file manager with upload/download and user permissions. |
 | **gitea/**     | Gitea – Lightweight, self-hosted Git service similar to GitHub. |
