@@ -1,0 +1,2 @@
+To create image - docker build -t debian-novnc .
+To create container - docker run debian-novnc -d -p 6080:6080 debian-novnc
