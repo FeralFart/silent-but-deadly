@@ -1,3 +1,8 @@
+Amend passwords in Dockerfile
+
+ARG ROOT_PASSWORD= # Root password
+ARG DEBIAN_PASSWORD= # User (debian) password
+
 To create image - docker build -t debian-novnc .
 To create container - docker run -d --name debian-novnc -p 6080:6080 debian-novnc
 Accessibe via web browser - http://localhost:6080/
