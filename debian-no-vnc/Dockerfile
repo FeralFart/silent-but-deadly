@@ -7,8 +7,8 @@ ENV NOVNC_PORT=6080
 ENV HOME=/home/debian
 
 # Build-time password args
-ARG ROOT_PASSWORD=Holly
-ARG DEBIAN_PASSWORD=Holly
+ARG ROOT_PASSWORD= # Root password
+ARG DEBIAN_PASSWORD= # User (debian) password
 
 # Install all packages
 RUN apt-get update && apt-get install -y \
