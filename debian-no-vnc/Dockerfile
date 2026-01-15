@@ -66,7 +66,7 @@ RUN mkdir -p /home/debian/logs && chown -R debian:debian /home/debian/logs
 # Fix noVNC path
 RUN ln -s /usr/share/novnc/vnc.html /usr/share/novnc/index.html
 
-# Create VNC password
+# Create VNC password. Default is "debian".
 RUN mkdir -p /home/debian/.vnc && \
     x11vnc -storepasswd debian /home/debian/.vnc/passwd && \
     chown -R debian:debian /home/debian/.vnc
