@@ -11,17 +11,23 @@ ARG ROOT_PASSWORD= # Root password
 ARG DEBIAN_PASSWORD= # User (debian) password
 
 # Install all packages
-RUN apt-get update && apt-get install -y \
-    xfce4 xfce4-terminal \
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    xfce4 xfce4-terminal xfdesktop4\
     x11vnc xvfb \
     novnc websockify \
     dbus-x11 \
     supervisor \
     fonts-dejavu \
-    sudo curl \
-    unattended-upgrades apt-listchanges less \
+    sudo \
+    curl wget \
+    nano less tree \
+    unzip zip \
+    iproute2 net-tools iputils-ping \
+    unattended-upgrades apt-listchanges \
     chromium \
-    && apt-get clean && rm -rf /var/lib/apt/lists/*
+ || apt-get install -y --no-install-recommends chromium-browser \
+ && apt-get clean \
+ && rm -rf /var/lib/apt/lists/*
 
 # Configure unattended upgrades
 RUN dpkg-reconfigure --frontend noninteractive unattended-upgrades && \
