@@ -3,6 +3,11 @@ Amend passwords in Dockerfile
 ARG ROOT_PASSWORD= # Root password
 ARG DEBIAN_PASSWORD= # User (debian) password
 
+Amend VNC password from default "debian" password
+RUN mkdir -p /home/debian/.vnc && \
+    x11vnc -storepasswd debian /home/debian/.vnc/passwd && \
+    chown -R debian:debian /home/debian/.vnc
+
 To create image - docker build -t debian-novnc .
 To create container - docker run -d --name debian-novnc -p 6080:6080 debian-novnc
 Accessibe via web browser - http://localhost:6080/
