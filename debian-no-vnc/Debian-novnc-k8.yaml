@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: debian-novnc
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: debian-novnc
+  template:
+    metadata:
+      labels:
+        app: debian-novnc
+    spec:
+      containers:
+      - name: debian-novnc
+        image: debian-novnc:latest
+        ports:
+        - containerPort: 6080
