@@ -29,7 +29,7 @@ It runs only on a linux host, requires several directories for persistent storag
 ./tmp/api
 ./tmp/nginx/active-config
 ```
-Commands to create folders and set permissions:
+### Commands to create folders and set permissions:
 
 ```bash
 sudo rm -rf ./data ./tmp
