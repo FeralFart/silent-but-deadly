@@ -2,7 +2,7 @@ NetAlertX is a scalable and secure solution for comprehensive network monitoring
 
 It runs only on a linux host, requires several directories for persistent storage and runtime operations to be set up.
 
-## Directory Layout:
+### Directory Layout:
 
 ```text
 ~/docker/netalertx/
@@ -19,7 +19,7 @@ It runs only on a linux host, requires several directories for persistent storag
         └── active-config/
 ```
 
-## Folders to be created:
+### Folders to be created:
 
 ```text
 ./data/db
@@ -36,22 +36,22 @@ sudo rm -rf ./data ./tmp
 mkdir -p ./data/db ./data/config ./tmp/log ./tmp/run/tmp ./tmp/api ./tmp/nginx/active-config
 ```
 
-## Set ownership and permissions to allow container read/write
+### Set ownership and permissions to allow container read/write
 
 ```bash
 sudo chmod -R 777 ~/docker/netalertx
 ```
 
-## Firewall / Networking Fix
+### Firewall / Networking Fix
 
-### Allow the required NetAlertX ports:
+#### Allow the required NetAlertX ports:
 
 ```bash
 sudo iptables -I DOCKER-USER -p tcp --dport 20211 -j ACCEPT
 sudo iptables -I DOCKER-USER -p tcp --dport 20212 -j ACCEPT
 ```
 
-### Save iptables rules so they persist after reboot:
+#### Save iptables rules so they persist after reboot:
 
 ```bash
 sudo apt install iptables-persistent
