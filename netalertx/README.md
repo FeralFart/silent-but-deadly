@@ -1,4 +1,6 @@
-# NetAlertX runs only on a linux host, requires several directories for persistent storage and runtime operations.
+NetAlertX is a scalable and secure solution for comprehensive network monitoring, supporting security awareness and operational efficiency.
+
+It runs only on a linux host, requires several directories for persistent storage and runtime operations to be set up.
 
 ## Directory Layout:
 
