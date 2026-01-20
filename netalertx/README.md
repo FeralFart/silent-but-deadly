@@ -2,8 +2,6 @@
 
 ## Directory Layout:
 
-Project root:
-
 ```text
 ~/docker/netalertx/
 ├── docker-compose.yml
@@ -17,7 +15,7 @@ Project root:
     ├── api/
     └── nginx/
         └── active-config/
-
+```
 
 ## Folders to be created:
 
