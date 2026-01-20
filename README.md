@@ -17,6 +17,7 @@ Each service lives in its own folder with a dedicated `*.yml` file for easy depl
 | **heimdall/**  | Heimdall – Application dashboard to organise shortcuts to all services. |
 | **homeassistant/** | Home Assistant – Home automation and smart device control. |
 | **immich/**    | Immich – Self-hosted photo and video backup solution. |
+| **netalertx/**    | NetAlertX – Solution for comprehensive network monitoring. |
 | **nginx-alpine/**     | Nginx – Minimalist reverse proxy for devices with limited storage space. |
 | **nginx-web/**     | Nginx – Absolute minimum (no backend, no DB) static HTML dashboard. |
 | **nginx/**     | Nginx – Lightweight web server or reverse proxy. |
