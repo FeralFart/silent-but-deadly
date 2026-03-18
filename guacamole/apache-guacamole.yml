@@ -1,0 +1,35 @@
+services:
+
+  guacd:
+    image: guacamole/guacd
+    container_name: guacd
+    restart: unless-stopped
+
+  mariadb:
+    image: mariadb:latest
+    container_name: guac-mariadb
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: guacrootpass
+      MYSQL_DATABASE: guacamole_db
+      MYSQL_USER: guacamole_user
+      MYSQL_PASSWORD: guacpass
+    volumes:
+      - ./guac-db:/var/lib/mysql
+
+  guacamole:
+    image: guacamole/guacamole
+    container_name: guacamole
+    restart: unless-stopped
+    depends_on:
+      - guacd
+      - mariadb
+    ports:
+      - "8080:8080"
+    environment:
+      GUACD_HOSTNAME: guacd
+      MYSQL_HOSTNAME: mariadb
+      MYSQL_DATABASE: guacamole_db
+      MYSQL_USER: guacamole_user
+      MYSQL_PASSWORD: guacpass
+      WEBAPP_CONTEXT: ROOT
