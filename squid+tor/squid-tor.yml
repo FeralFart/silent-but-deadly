@@ -16,7 +16,7 @@ services:
     ports:
       - "8118:8118"
     volumes:
-      - ./privoxy/config:/etc/privoxy/config
+      - ./config:/etc/privoxy/config
 
   squid:
     image: ubuntu/squid
