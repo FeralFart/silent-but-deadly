@@ -1,0 +1,12 @@
+Apache Guacamole is a clientless remote desktop gateway that allows you to access systems via RDP, VNC, and SSH directly through a web browser.
+It requires no additional software on the client side, making remote access simple and platform-independent.
+
+Stack:
+Apache Guacamole (Docker)
+guacd
+MySQL / MariaDB
+
+Run the following commands to initialise DB after deployment:
+
+docker run --rm guacamole/guacamole /opt/guacamole/bin/initdb.sh --mysql > initdb.sql
+Get-Content .\initdb.sql | docker exec -i guac-mariadb mariadb -u root -pguacrootpass guacamole_db
