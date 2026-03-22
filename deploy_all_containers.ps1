@@ -1,4 +1,6 @@
-$root = "E:\Docker" #Amend this to match deployment location for docker containers
+# Simple PSS that deploys all containers at once.
+
+$root = "E:\Docker" # Amend this to match deployment location for docker containers
 
 $yamls = Get-ChildItem $root -Recurse -Depth 2 -File -Include *.yml, *.yaml
 
