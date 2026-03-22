@@ -1,0 +1,17 @@
+services:
+  prunemate:
+    image: anoniemerd/prunemate:latest  # Supports amd64 and arm64
+    container_name: prunemate
+    ports:
+      - "7676:8080"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./logs:/var/log
+      - ./config:/config
+    environment:
+      - PRUNEMATE_TZ=Europe/London # Change this to your desired timezone
+      - PRUNEMATE_TIME_24H=true #false for 12-Hour format (AM/PM)
+      # Optional: Enable authentication (generate hash with: docker run --rm anoniemerd/prunemate python prunemate.py --gen-hash "password")
+      # - PRUNEMATE_AUTH_USER=admin
+      # - PRUNEMATE_AUTH_PASSWORD_HASH=your_base64_encoded_hash_here
+    restart: unless-stopped
