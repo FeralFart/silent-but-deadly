@@ -22,6 +22,7 @@ Each service lives in its own folder with a dedicated `*.yml` file for easy depl
 | **nginx-alpine/**     | Nginx – Minimalist reverse proxy for devices with limited storage space. |
 | **nginx-proxy-manager/**     | Nginx – Lightweight reverse proxy with GUI. |
 | **nginx-web/**     | Nginx – Absolute minimum (no backend, no DB) static HTML dashboard. |
+| **node-red/**     | Node Red – Low-code programming for event-driven applications. |
 | **pihole/**    | Pi-hole – Network-wide ad blocker and DNS sinkhole. |
 | **plex/**      | Plex Media Server – Movie and TV streaming for local media libraries;<br>also includes related media management services such as: <br><br>qBittorrent – Open-source software alternative to µTorrent,<br>Radarr – Media management tool,<br>Tautulli – Monitoring and analytics tool for Plex. |
 | **portainer/** | Portainer – Web UI for managing Docker containers. |
