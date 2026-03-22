@@ -26,6 +26,7 @@ Each service lives in its own folder with a dedicated `*.yml` file for easy depl
 | **pihole/**    | Pi-hole – Network-wide ad blocker and DNS sinkhole. |
 | **plex/**      | Plex Media Server – Movie and TV streaming for local media libraries;<br>also includes related media management services such as: <br><br>qBittorrent – Open-source software alternative to µTorrent,<br>Radarr – Media management tool,<br>Tautulli – Monitoring and analytics tool for Plex. |
 | **portainer/** | Portainer – Web UI for managing Docker containers. |
+| **prune-mate/** | Prune Mate – Docker image and resources cleanup helper. Also includes remote agent option. |
 | **rabbitmq/** | RabbitMQ – Messaging and streaming broker. |
 | **squid+tor/** | Squid Proxy with Tor – Setup that combines Squid Proxy with Tor for anonymous and cached web browsing. |
 | **trilium/** | Trilium – Cross-platform, hierarchical note taking application. |
