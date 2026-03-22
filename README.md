@@ -14,16 +14,19 @@ Each service lives in its own folder with a dedicated `*.yml` file for easy depl
 | **dozzle/** | Dozzle – Web-based simplest live-log viewer. |
 | **filebrowser/** | FileBrowser – Web-based file manager with upload/download and user permissions. |
 | **gitea/**     | Gitea – Lightweight, self-hosted Git service similar to GitHub. |
+| **guacamole/**  | Apache Guacamole – clientless remote desktop gateway that allows you to access systems via RDP, VNC, and SSH directly through a web browser. |
 | **heimdall/**  | Heimdall – Application dashboard to organise shortcuts to all services. |
 | **homeassistant/** | Home Assistant – Home automation and smart device control. |
 | **immich/**    | Immich – Self-hosted photo and video backup solution. |
 | **netalertx/**    | NetAlertX – Solution for comprehensive network monitoring. |
 | **nginx-alpine/**     | Nginx – Minimalist reverse proxy for devices with limited storage space. |
-| **nginx-web/**     | Nginx – Absolute minimum (no backend, no DB) static HTML dashboard. |
 | **nginx-proxy-manager/**     | Nginx – Lightweight reverse proxy with GUI. |
+| **nginx-web/**     | Nginx – Absolute minimum (no backend, no DB) static HTML dashboard. |
 | **pihole/**    | Pi-hole – Network-wide ad blocker and DNS sinkhole. |
 | **plex/**      | Plex Media Server – Movie and TV streaming for local media libraries;<br>also includes related media management services such as: <br><br>qBittorrent – Open-source software alternative to µTorrent,<br>Radarr – Media management tool,<br>Tautulli – Monitoring and analytics tool for Plex. |
 | **portainer/** | Portainer – Web UI for managing Docker containers. |
+| **rabbitmq/** | RabbitMQ – Messaging and streaming broker. |
+| **squid+tor/** | Squid Proxy with Tor – Setup that combines Squid Proxy with Tor for anonymous and cached web browsing. |
 | **trilium/** | Trilium – Cross-platform, hierarchical note taking application. |
 | **uptimekuma/** | Uptime Kuma – System monitoring. |
 | **watchtower/** | Watchtower – Automatic container updates. |
@@ -39,6 +42,8 @@ To deploy any service:
 ```powershell
 cd SERVICE_NAME
 docker-compose -f .\SERVICE_NAME.yml up -d
+
+Or to deploy all services at once,  run attached deploy_all_containers.ps1 script
 
 # Example:
 cd gitea
