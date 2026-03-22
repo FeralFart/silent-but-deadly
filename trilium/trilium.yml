@@ -10,5 +10,5 @@ services:
     environment:
       - TZ=Europe/London
       - TRILIUM_PORT=8080
-      - TRILIUM_ADMIN_PASSWORD=admin
+      - TRILIUM_ADMIN_PASSWORD=admin # Amend password
     restart: unless-stopped
