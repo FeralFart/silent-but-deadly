@@ -1,0 +1,12 @@
+services:
+  code-server:
+    image: codercom/code-server:latest
+    container_name: code-server
+    ports:
+      - "8765:8080"
+    volumes:
+      - E:/Docker:/home/coder/project      # Point to the root of your Docker folder
+      - E:/Docker/CodeServer:/home/coder/.config # Point to where Code Server is deployed
+    environment:
+      - PASSWORD=CodeServer # Amend it
+    restart: unless-stopped
