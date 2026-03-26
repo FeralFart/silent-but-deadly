@@ -10,6 +10,7 @@ Each service lives in its own folder with a dedicated `*.yml` file for easy depl
 | Service        | Description |
 |----------------|-------------|
 | **adguard/**   | AdGuard Home – DNS-level ad blocking and network filtering. |
+| **code-server/**   | Code Server – VSCode in a browser. No clinet installation required. |
 | **debian-no-vnc/** | Debian Trixie – Minimal Debian desktop accessible via noVNC. Useful for testing GUI apps or running lightweight desktop in Docker. |
 | **dozzle/** | Dozzle – Web-based simplest live-log viewer. |
 | **filebrowser/** | FileBrowser – Web-based file manager with upload/download and user permissions. |
