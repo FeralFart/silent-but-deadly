@@ -2,7 +2,7 @@
 
 $root = "E:\Docker" # Amend this to match deployment location for docker containers
 
-$yamls = Get-ChildItem $root -Recurse -Depth 2 -File -Include *.yml, *.yaml
+$yamls = Get-ChildItem $root -Recurse -Depth 1 -File -Include *.yml, *.yaml
 
 foreach ($file in $yamls) {
 
